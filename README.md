@@ -62,15 +62,13 @@ A summary of the access policies in place can be found in the table below.
 | Web-2        | No                  | 52.183.102.245       | Linux            |
 | ElkProject1VM| No                  | 52.183.102.245       | Linux            |
 ### Elk Configuration
-A.) I used Ansible to configure and automate the Elk Machine. Using Ansible allows for a few 
-
-Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because...A.) Using Ansible allows for universal changes to be made within any of the VMs associated with the AnsibleThis allows for Universal changes to be made within any of the VMs associated with the Ansible. Keeps things consitant and fluid with the playbook established.
+A.) I used Ansible to configure and automate the Elk Machine. No configuration was performed manually, which is advantageous because, Ansible allows for universal changes to be made within any of the VMs associated with the Ansible. This helps with consistency between machines and fluidity with the playbook established.
 
 - (Question): What is the main advantage of automating configuration with Ansible?
   A.) One of the main advantages of "Automation" within Ansible is the use of roles. Ansible Roles provide the groundwork or the road map for either fully independent,or interdependent collections of variables, tasks, files, templates and modules. These Roles simplify the writing of complex playbooks. The Rolse themselfs are not the Playbooks, but rather simple functionalities within the playbook. Basically the "legos" to your larger machine.
 
 The playbook implements the following tasks:
-- (Question): In 3-5 bullets, explain the steps of the ELK installation play. E.g., install Docker; download image; etc._
+- (Question): Explain the steps of the ELK installation play. 1st) Install doker.io  2nd.) Installpython3-pip 3rd.)Install Docker module E.g.
 - Elk Instalation:) Creating a new vNet which we needed to be located in the same (resource group), most of the setting stayed consistant, my focus was on the adding Peering, which established the connection between all vNets. Importan for allowing traffic to pass between said vNets a
 - Install Docker): we had to create a playbook that installed Docker and configured the containers, -name: Config elk VM with Docker
 
