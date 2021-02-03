@@ -52,9 +52,7 @@ _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdow
 The machines on the internal network are not exposed to the public Internet. 
 
 Only the (Jump Box Provisioner) machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses: (My IP)
-- (Question): Add whitelisted IP addresses
-  A.) My Ip, just put my ip because of the public nature of GITHUB.com
-
+- The machines built within this network can only be accessed by the provisioned Jump box.This particular provisioning allows for only my personl IP to gain access to the Elk Project machines by remote access through said Jump box within the Ansible container.
 A summary of the access policies in place can be found in the table below.
 
 | Name         | Publicly Accessible | Allowed IP Addresses |
