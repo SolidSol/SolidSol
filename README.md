@@ -55,12 +55,12 @@ Only the (Jump Box Provisioner) machine can accept connections from the Internet
 - The machines built within this network can only be accessed by the provisioned Jump box.This particular provisioning allows for only my personl IP to gain access to the Elk Project machines by remote access through said Jump box within the Ansible container.
 A summary of the access policies in place can be found in the table below.
 
-| Name         | Publicly Accessible | Allowed IP Addresses |
-|--------------|---------------------|----------------------|
-| Jump Box     | Yes                 | 10.0.0.1 10.0.0.2    |
-| Web-1        | No                  | 52.183.102.245       |
-| Web-2        | No                  | 52.183.102.245       |
-| ElkProject1VM| No                  | 52.183.102.245       |
+| Name         | Publicly Accessible | Allowed IP Addresses | Operating System |
+|--------------|---------------------|----------------------|------------------|
+| Jump Box     | Yes                 | 10.0.0.1 10.0.0.2    | Linux            | 
+| Web-1        | No                  | 52.183.102.245       | Linux            |
+| Web-2        | No                  | 52.183.102.245       | Linux            |
+| ElkProject1VM| No                  | 52.183.102.245       | Linux            |
 ### Elk Configuration
 A.) I used Ansible to configure and automate the Elk Machine. Using Ansible allows for a few 
 
