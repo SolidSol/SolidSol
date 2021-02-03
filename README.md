@@ -113,4 +113,3 @@ _TODO: Answer the following questions to fill in the blanks:_
  A.) Elk.yml
 - _Which URL do you navigate to in order to check that the ELK server is running?
  A.)http://[ElkProject1VM-ip]:5601/app/kibana
-
