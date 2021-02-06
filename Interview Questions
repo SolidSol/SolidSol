@@ -1,0 +1,50 @@
+Domain: Network Security   Question#1 
+"Suppose I have a firewall that's supposed to block SSH connections, but instead lets them through. How would you debug it?"
+  The first thing that I would do is check all traffic settings established within the firewall, see what priorities have been made. Then I would check all the inbound/outbound rules built into the NSG's, the Load balancers and the machines themselfs. I would also see what connections have been established for all of the vms.
+
+"In Project 1, did you allow SSH traffic to all of the VMs on your network?"
+  No I did not allow all ssh traffic to all of my VMs on my network. 
+
+"Which VMs did accept SSH connections?"
+  My Jumpbox had the lowest priority with port 22 open from 10.0.0.4 to my virtual network. While my Elk project had the next lowest priority with port 5601 and with my IP being the the only accessable entry. While there was a DenyAllinBound rule put in place for everything else.
+
+"What happens if you try to connect to a VM that does not accept SSH connections? Why?"
+  If the VM does not accept SSH Traffic then it doesn’t work. Either the pathway isn’t built, or there is a rule that is blocking traffic.
+
+"Explain the Solution Requirements?"
+If one of my Project 1 VMs accepted SSH connections, what would I assume the source of the error is?
+  Unless I built it to operate that way on purpose, I would want to assume that rules that I put in place during the building of that VMs were sound. But, the rules built into the machines would be the first place that I check for error.
+  
+The general configurations that I would double check are the Priotirty ratings and then the Inbound and outbound rules, looking at the networking settings then the Connect/SSH settings.
+
+"What actions would I take to test that my new configurations are effective?"
+  I would pull up Gitbash and try to ssh in, double checking the allowable access through which ports, and check the priorities of all the rules put in place.
+  
+"The specific panes in the Azure UI that I would look at to investigate the problem?"
+  I would look at the Virtual Networs, the NSGs and the LOad Balancers and then confirming the access Control.(IAM)
+  And the Specific configurations and controls to check would be the Peerings between machines, the Inbound Security Rules, then looking at the containers built, the source Ips and the Destination and confirming the generated Key.
+  
+ "Does my solution guarantee that the Project 1 network is now "immune" to all unauthorized access?
+  It should, no outside IP that I have not confirmed should have access or the ability to SSH in, but nothing and no one is infallible.
+  
+  
+  Domain: CLoud Security 
+  How I would control access to a cloud network? 
+    I would limit any and all traffic to my network to have to go through the Jump box, then make sure that my Ip was the only accessible IP to that jump box. Controlling access to a cloud network with IAM, Identity and access Management. I would focus on policies and practices both physical and electronic. Put emphasis on monitoring unauthorized internal and external access, internal misuse, and try to eliminate any internal or external modification and outside. Putting specific emphasis on verifiable cyber threats. Stay ahead of the curve on vulnerabilities of the network and areas of opportunity.
+
+ "In Project 1, I deployed a cloud network?
+    Building my network and machines in Ansible.
+    
+ "For this project I had to configure access controls to this network?"
+    I limited all inbound traffic through the JuMpBox that I created. I limited all inbound trafic to that juMpbox through my Local IP. through the configuration of the “Virtual Networks” the “NSGs” and the “Virtual Machines”  The network that I build in Ansible was fairly consistence with each machine but there was some variation that took shape from machine to machine.
+  
+ "All these details can relate to the interview?
+    By Showing the different options available for developing an entire network let alone a single computer. That understanding the difference between on-site physical equipment and cloud services plays a huge role in how the network will take shape. It also plays a huge role in cost efficiency.
+ 
+ 
+    
+    
+    
+    
+    
+    
