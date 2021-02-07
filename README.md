@@ -47,24 +47,25 @@ _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdow
 
 The machines on the internal network are not exposed to the public Internet. 
 
-Only the (Jump Box Provisioner) machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses: (My IP)
-- The machines built within this network can only be accessed by the provisioned Jump box.This particular provisioning allows for only my personl IP to gain access to the Elk Project machines by remote access through said Jump box within the Ansible container.
+Only the (Jump Box) machine can accept connections from the Internet through PORT 22. Access to this machine is only allowed from the following IP addresses: (My IP)
+- The 3 machines built within this network can only be accessed by the provisioned Jump box.This particular provisioning allows for only my personl IP to gain access to the ElkProject1VM works off of PORT 5601. Machines outside of this network can only gain access by remote access through said Jump box within the Ansible container.
+
 A summary of the access policies in place can be found in the table below.
 
 | Name         | Publicly Accessible | Allowed IP Addresses | Operating System |
 |--------------|---------------------|----------------------|------------------|
 | Jump Box     | Yes                 | 10.0.0.1 10.0.0.2    | Linux            | 
-| Web-1        | No                  | 52.183.102.245       | Linux            |
-| Web-2        | No                  | 52.183.102.245       | Linux            |
-| ElkProject1VM| No                  | 52.183.102.245       | Linux            |
-### Elk Configuration
-A.) I used Ansible to configure and automate the Elk Machine. No configuration was performed manually, which is advantageous because, Ansible allows for universal changes to be made within any of the VMs associated with the Ansible. This helps with consistency between machines and fluidity with the playbook established.
+| Web-1        | No                  | My ip                | Linux            |
+| Web-2        | No                  | My IP                | Linux            |
+| ElkProject1VM| SSH-NO /http-yes    | MY Ip                | Linux            |
 
-- (Question): What is the main advantage of automating configuration with Ansible?
-  A.) One of the main advantages of "Automation" within Ansible is the use of roles. Ansible Roles provide the groundwork or the road map for either fully independent,or interdependent collections of variables, tasks, files, templates and modules. These Roles simplify the writing of complex playbooks. The Rolse themselfs are not the Playbooks, but rather simple functionalities within the playbook. Basically the "legos" to your larger machine.
+### Elk Configuration
+- I used Ansible to configure and automate the all three of the VM's. No configuration was performed manually, which is advantageous because, Ansible allows for universal changes to be made within any of the VMs associated with the Ansible. This helps with consistency between machines and fluidity with the playbook established.
+
+- One of the main advantages of "Automation" within Ansible is the use of roles. Ansible Roles provide the groundwork or the road map for either fully independent,or interdependent collections of variables, tasks, files, templates and modules. These Roles simplify the writing of complex playbooks. The Rolse themselfs are not the Playbooks, but rather simple functionalities within the playbook. Basically the "legos" to your larger machine.
 
 The playbook implements the following tasks:
-- (Question): Explain the steps of the ELK installation play. 1st) Install doker.io  2nd.) Installpython3-pip 3rd.)Install Docker module E.g.
+- The VMs can be built in 5 steps. 1st)  Install doker.io  2nd.) Install python3-pip 3rd.)Install Docker module E.g.
 - Elk Instalation:) Creating a new vNet which we needed to be located in the same (resource group), most of the setting stayed consistant, my focus was on the adding Peering, which established the connection between all vNets. Importan for allowing traffic to pass between said vNets a
 - Install Docker): we had to create a playbook that installed Docker and configured the containers, -name: Config elk VM with Docker
 
