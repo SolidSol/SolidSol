@@ -71,7 +71,7 @@ The playbook implements the following tasks:
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
-![Docker](https://github.com/SolidSol/SolidSol/blob/main/Elk%20Project%231%20docker_ps_-a.PNG)
+![Docker](https://github.com/SolidSol/SolidSol/blob/main/Elk%20Project%231%20docker%20confirm.PNG)
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
@@ -88,9 +88,7 @@ We have installed the following Beats on these machines:
  A.) Filebeat and MetricBeat
 
 These Beats allow us to collect the following information from each machine:
-- (Question): In 1-2 sentences, explain what kind of data each beat collects, and provide 1 example of what you expect to see. E.g., `Winlogbeat` collects Windows logs, which we use to track user logon events, etc.
- A.) Filebeat watches/monitors log files, log events and locations that users specify,   Example: Inputs and harvesters
- A.) Metricbeat watches for any information in the file system which has been changed/altered and time frame. Takes the statistics
+- Filebeat watches/monitors log files, log events and locations that users specify,   Example: Inputs and harvesters. While Metricbeat watches for any information in the file system which has been changed/altered and time frame. Takes the statistics
 
 ### Using the Playbook
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
