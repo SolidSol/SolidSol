@@ -75,33 +75,30 @@ The following screenshot displays the result of running `docker ps` after succes
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
-10.1.0.4
-10.0.0.4
-10.0.0.5
-10.0.0.6
+ElkProject1VM   10.1.0.4
+JuMpBox  10.0.0.4
+Web-1  10.0.0.5
+Web-2  10.0.0.6
 
 
 - List the IP addresses of the machines you are monitoring_
 
-We have installed the following Beats on these machines:
-- : Specify which Beats you successfully installed
- A.) Filebeat and MetricBeat
+- I successfully installed Filebeat and MetricBeat on my Web-1, Web-2 and ElkProject1VM
 
-These Beats allow us to collect the following information from each machine:
 - Filebeat watches/monitors log files, log events and locations that users specify,   Example: Inputs and harvesters. While Metricbeat watches for any information in the file system which has been changed/altered and time frame. Takes the statistics
 
 ### Using the Playbook
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
 
 SSH into the control node and follow the steps below:
-- Copy the _____ file to _____.
-- Update the _____ file to include...
+- Edit the /etc/ansible/ansible.cfg command line remote_user=username to refelect the remote account being used to execute playbooks.
+
+- Update the /etc/ansible/host file to the group(s) we want to install packages on. 
 - Run the playbook, and navigate to Jump box to check that the installation worked as expected.
 
 _TODO: Answer the following questions to fill in the blanks:_
 - _Which file is the playbook? Where do you copy it?
- A.) ansible.cfg
-- _Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on?_
- A.) Elk.yml
-- _Which URL do you navigate to in order to check that the ELK server is running?
- A.)http://[ElkProject1VM-ip]:5601/app/kibana
+ A.) The ansible.cfg file is the playbook
+- I updated the (Elk.yml) file to make Ansible run the playbook on a specific machine? To specify which machine to install the ELK server on versus which to install Filebeat on, I used specific IP's of the servers?
+ 
+- In order to check that the my ELK server was running I navigated to http://[ElkProject1VM-ip]:5601/app/kibana
