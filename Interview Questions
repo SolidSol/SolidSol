@@ -41,6 +41,8 @@ The general configurations that I would double check are the Priotirty ratings a
  "All these details can relate to the interview?
     By Showing the different options available for developing an entire network let alone a single computer. That understanding the difference between on-site physical equipment and cloud services plays a huge role in how the network will take shape. It also plays a huge role in cost efficiency.
  
+ Domain: Logging and Monitoring
+ 
  In Project 1, I implemented a few access controls, thoswe being the Network security Groups around the Vnet, that mandated inbound outbound traffic into the network. I also built in a Load-balancer to  control the flow of data. Then mandated that a VM must use the same SSH keys as the other WebVM's and then added my public IP address to the whitelist. All of that together has any inbound traffic needing SSh keys to access to the VMS. The NSG’s that allows for limited TCP traffic over port 5601
  
  The jump box is relativily simple you need the correct command key, coming from my specific IP. once in the Jump box, one would still need the correct usernam and speci IP address to get into any VM.
