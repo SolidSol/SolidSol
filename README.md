@@ -96,9 +96,7 @@ SSH into the control node and follow the steps below:
 - Update the /etc/ansible/host file to the group(s) we want to install packages on. 
 - Run the playbook, and navigate to Jump box to check that the installation worked as expected.
 
-_TODO: Answer the following questions to fill in the blanks:_
-- _Which file is the playbook? Where do you copy it?
- A.) The ansible.cfg file is the playbook
+- The ansible.cfg file is the playbook
 - I updated the (Elk.yml) file to make Ansible run the playbook on a specific machine? To specify which machine to install the ELK server on versus which to install Filebeat on, I used specific IP's of the servers?
  
 - In order to check that the my ELK server was running I navigated to http://[ElkProject1VM-ip]:5601/app/kibana
